@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<title></title>
 </head>
 <body>
-  
+	Eesnimi <input type="text1" id = "first-name">
+	perekonnanimi <input type="text2" id = "last-name">
+	<input type="submit" value="tervita" onclick="welcome()">
+
+	<div id=output>  </div>
+
+	<script>
+
+		var first_name
+		var last_name
+
+
+		function welcome(){
+			// console.log('töötab')
+			// console.error('ei töötab')
+			first_name = document.getElementById('first-name').value;
+			last_name = document.getElementById('last-name').value;
+
+			console.log(first_name + ' ' + last_name);
+			document.getElementById('output').innerHTML = '<b>Tere </b>' +first_name + ' '+ last_name;
+
+		}
+	</script>
 </body>
 </html>
